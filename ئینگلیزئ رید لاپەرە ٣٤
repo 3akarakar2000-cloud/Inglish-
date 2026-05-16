@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کویزی دەریای ئارال - Aral Sea Quiz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .quiz-container {
+            max-width: 650px;
+            background: #ffffff;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .question {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-right: 5px solid #3498db;
+        }
+        .question p {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 10px 0;
+        }
+        .en-text {
+            display: block;
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: normal;
+            margin-top: 5px;
+            direction: ltr;
+            text-align: right;
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .options li {
+            margin-bottom: 8px;
+        }
+        .options label {
+            display: block;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .options label:hover {
+            background: #e8f4fd;
+            border-color: #3498db;
+        }
+        .options input[type="radio"] {
+            margin-left: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #27ae60;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            display: none;
+        }
+        .success { background-color: #d4edda; color: #155724; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>📝 تاقیکردنەوەی دەریای ئارال (Aral Sea Quiz)</h1>
+    
+    <form id="quizForm">
+        <div class="question">
+            <p>١. پێش کارەساتەکە، پلەی دەریای ئارال لە نێوان گەورەترین دەریاچەکانی جیهاندا چەند بوو؟
+                <span class="en-text">(What was the rank of the Aral Sea among the world's largest lakes before the disaster?)</span>
+            </p>
+            <ul class="options">
+                <li><label><input type="radio" name="q1" value="A"> A) یەکەم گەورەترین دەریاچە (The first-largest)</label></li>
+                <li><label><input type="radio" name="q1" value="B"> B) دووەم گەورەترین دەریاچە (The second-largest)</label></li>
+                <li><label><input type="radio" name="q1" value="C"> C) سێیەم گەورەترین دەریاچە (The third-largest)</label></li>
+                <li><label><input type="radio" name="q1" value="D"> D) چوارەم گەورەترین دەریاچە (The fourth-largest)</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٢. بۆچی یەکێتی سۆڤیەتی نوێ ویستی ئاوی ڕووبارەکان بەکاربهێنێت؟
+                <span class="en-text">(Why did the new Soviet Union want to use the river water?)</span>
+            </p>
+            <ul class="options">
+                <li><label><input type="radio" name="q2" value="A"> A) بۆ بەرهەمهێنانی لۆکە (To produce cotton)</label></li>
+                <li><label><input type="radio" name="q2" value="B"> B) بۆ دروستکردنی کارەبا (To generate electricity)</label></li>
+                <li><label><input type="radio" name="q2" value="C"> C) بۆ ماسیگرتن (For fishing)</label></li>
+                <li><label><input type="radio" name="q2" value="D"> D) بۆ گەشتیاری (For tourism)</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٣. تا ساڵی ٢٠٠٠ چی بەسەر دەریایەکەدا هات؟
+                <span class="en-text">(What happened to the sea by the year 2000?)</span>
+            </p>
+            <ul class="options">
+                <li><label><input type="radio" name="q3" value="A"> A) وشک بوو بە تەواوی (It dried up completely)</label></li>
+                <li><label><input type="radio" name="q3" value="B"> B) دابەش بوو بۆ دوو دەریا (It broke into two seas)</label></li>
+                <li><label><input type="radio" name="q3" value="C"> C) قووڵتر بوو (It became deeper)</label></li>
+                <li><label><input type="radio" name="q3" value="D"> D) بوو بە ئاوی شیرین (It became fresh water)</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٤. وشەی "Irrigation" بە مانای چی دێت؟
+                <span class="en-text">(What does the word "Irrigation" mean?)</span>
+            </p>
+            <ul class="options">
+                <li><label><input type="radio" name="q4" value="A"> A) پیسبوون (Pollution)</label></li>
+                <li><label><input type="radio" name="q4" value="B"> B) ئاودێری (Irrigation)</label></li>
+                <li><label><input type="radio" name="q4" value="C"> C) ماسیگرتن (Fishing)</label></li>
+                <li><label><input type="radio" name="q4" value="D"> D) بەنداو (Dam)</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٥. کێ لە ساڵی ٢٠٠٥ پارەی دابینکرد بۆ چارەسەرکردنی کێشەکە؟
+                <span class="en-text">(Who provided the money to find a solution in 2005?)</span>
+            </p>
+            <ul class="options">
+                <li><label><input type="radio" name="q5" value="A"> A) نەتەوە یەکگرتووەکان (United Nations)</label></li>
+                <li><label><input type="radio" name="q5" value="B"> B) یەکێتی سۆڤیەت (Soviet Union)</label></li>
+                <li><label><input type="radio" name="q5" value="C"> C) بانکی جیهانی (The World Bank)</label></li>
+                <li><label><input type="radio" name="q5" value="D"> D) ئەندازیارەکان (The engineers)</label></li>
+            </ul>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">ڕادەستکردنی وەڵامەکان (Submit)</button>
+    </form>
+
+    <div id="result" class="success"></div>
+</div>
+
+<script>
+    function checkAnswers() {
+        const answers = { q1: 'D', q2: 'A', q3: 'B', q4: 'B', q5: 'C' };
+        let score = 0;
+        const form = document.getElementById('quizForm');
+        
+        for (let key in answers) {
+            const selected = form.elements[key].value;
+            if (selected === answers[key]) {
+                score++;
+            }
+        }
+        
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `ئەنجامەکەت: ${score} لە کۆی 5 ڕاستە! <br> (Your Score: ${score} out of 5)`;
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
